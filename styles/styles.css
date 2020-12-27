@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1.5px dotted orange; */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: #FfFfFf;
+}
+
+p {
+  /*font-family: 'Bitter', serif;*/
+  /*font-family: 'Chakra Petch', sans-serif; */
+  font-family: 'Libre Baskerville', serif;
+  line-height: 2rem;
+}
+
+
+/* ---------------------------- HEADER ---------------------------------- */
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+h1.head-nav {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 6rem;
+  letter-spacing: 12px;
+  margin: 0;
+  color: #f2f3f4;
+  /* transition: all 1s .5s ease-out; */
+}
+
+.hidden{
+  position: relative;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.hidden:focus{
+  left: 0;
+}
+
+.sr-only {
+ position: absolute;
+ left: -10000px;
+ top: auto;
+ font-size: 0;
+ width: 1px;
+ height: 1px;
+ overflow: hidden;
+}
+
+
+/* header.navigation h1:hover {
+  font-size: 9rem;
+  text-shadow: 2px 2px 6px #ff0000;
+} */
+
+
+/* ---------------------------- NAVIGATION ------------------------------- */
+
+/* --------------- Social Nav Bar position and margins ------------------- */
+nav {
+  margin-bottom: 1em;
+}
+
+a.social-media:last-child {
+  margin-right: 200px;
+}
+
+a.social-nav {
+  font-size: 2rem;
+}
+
+a.linkedin.social-nav {
+  margin: 0;
+}
+
+/* ------------------------ Social Nav Hover effects --------------------- */
+
+a.social-nav:nth-child(odd) {
+  margin-right: 30px;
+  color: #F4f5f3;
+  transition: color .20s .5s ease-in-out;
+}
+
+a.social-nav:nth-child(odd):hover {
+  /* color: #2ec4b6; */
+  opacity: 0.8;
+}
+
+a.social-nav:nth-child(even) {
+  margin-right: 30px;
+  /* opacity: 0.8; */
+  color: #F4f5f3;
+  transition: color .20s .5s ease-in-out;
+}
+
+a.social-nav:nth-child(even):hover {
+  /* color: #ff0000; */
+  opacity: 0.8;
+}
+
+a.social-nav:nth-last-of-type(1) {
+  color: #F4f5f3;
+  margin-right: 0;
+  transition: color .20s .5s ease-in-out;
+}
+
+a.social-nav:nth-last-of-type(1):hover {
+  /* color: rgb(105, 157, 221); */
+  opacity: 0.8;
+}
+
+/* ----------------------- HEADER, hover effects -------------------------- */
+ .navigation {
+  background-color: #0d0d47;
+  /* background-color: #5C97FF; */
+  overflow: hidden;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+  transition-delay: .7s;
+}
+/*
+.navigation:hover {
+  background-image: url("../images/zona-cero-4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}  */
+
+/* ------------------------ MAIN CONTAINER - grid ------------------------ */
+
+.main-container {
+  display: grid;
+  grid-template-columns: 10% 60% 20% 10%;
+  box-sizing: border-box;
+  justify-items: center;
+  background-color: #3838D6;
+  height: 100%;
+  /* background: linear-gradient(to bottom, #5c8dff -4%, #0d0d47 100%); */
+  }
+
+/* ----------------------- CONTAINER ITEMS ------------------------------- */
+
+div#tool-icons {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: auto;
+  margin-bottom: auto; */
+  text-align: center;
+  font-size: 5rem;
+  align-self: center;
+  /* position: absolute; */
+}
+
+#tool-icons i[class^="fab"] {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  transition-property: font-size;
+  transition-timing-function: ease-in-out;
+  transition-duration: 4s;
+  transition-delay: 2s;
+}
+
+#tool-icons i[class^="fab"]:hover {
+  font-weight: normal;
+}
+
+#tool-icons i:nth-child(3) {
+  color: #FDF4F1;
+  /* color: rgb(240, 219, 79); */
+  margin-bottom: 0;
+}
+
+#tool-icons i:nth-last-child(2) {
+  color: #FDF4F1;
+  /* color: rgb(38, 77, 228); */
+}
+
+#tool-icons i:nth-child(1) {
+  color: #FDF4F1;
+  /* color: rgb(240, 101, 41); */
+}
+
+.about-me {
+  grid-column: 2;
+  padding: 1em;
+}
+
+h2 {
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: #FEE;
+  color: #000;
+  text-align: center;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+h2:hover {
+  background-color: #0d0d47;
+  width: 100%;
+  height: auto;
+  color: #fff;
+}
+
+p {
+  padding: 1rem 0;
+}
+
+.projects {
+  grid-column: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+  margin-top: auto;
+  align-items: center;
+}
+
+.projects ul {
+  text-align: center;
+  list-style-type: none;
+}
+
+.projects h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.projects h2:nth-child(odd) {
+  margin-top: 2rem;
+}
+
+.survey {
+  font-size: 22px;
+  width: 100%;
+}
+
+.survey:hover {
+  font-size: 22px;
+  /* width: 100%; */
+  background-color: #0d0d47;
+  width: 100%;
+  height: auto;
+  color: #fff;
+}
+
+a {
+  color: #F5F4f6;
+  font-weight: bold;
+}
+
+.link-1 {
+  margin-bottom: 2rem;
+}
+
+.dev-icons {
+  grid-column: 4;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+  margin-top: auto;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.dev-icons a {
+  margin-bottom: 1rem;
+}
+
+.dev-icons a i {
+  color: #F5F6F7;
+  transition: color 1s ease-out;
+}
+
+.dev-icons a:last-child {
+  margin-bottom: 0;
+}
+
+.dev-icons i:hover {
+  color: #0d0d47;
+}
+
+
+/* --------------------------- FOOTER ------------------------------------ */
+
+footer {
+  background-color: #0d0d47;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.nav-footer {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.nav-footer a {
+  color: #F4F4F6;
+  margin-right: 2em;
+}
+
+.footer-icon i {
+  margin-right: 2rem;
+}
+
+.nav-footer a:last-child {
+  margin-right: 0;
+}
+
+.footer-icon:last-child {
+  margin-right: 0;
+}
+
+h3 {
+  text-align: center;
+  color: #fFfFfF;
+  font-weight: bold;
+  /* text-shadow: .5px .5px 2px #001B4A;
+  word-spacing: normal;
+  transition: all .2s .4s ease-in-out; */
+}
+
+
+footer > h3 {
+  margin-top: 40px;
+   margin-bottom: 40px;
+}

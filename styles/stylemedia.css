@@ -1,0 +1,75 @@
+@media only screen and (max-width: 1184px) {
+
+
+  h1 {
+    font-size: 4rem;
+    letter-spacing: 2rem;
+    text-align: center;
+  }
+
+  header > p, a {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    margin: 0;
+  }
+
+  fieldset {
+    background-color: #014F93;
+    /* background-color: rgba(189, 224, 254,0.5); */
+    margin: 20px 0;
+    padding: 2rem;
+    border: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  input[type=submit] {
+    margin: 34px 0;
+  }
+
+  select {
+    width: 50%;
+  }
+
+  nav {
+    margin: 20px 0 40px 0;
+  }
+
+  .nav-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 25px;
+  }
+
+  .footer-icon i {
+    margin-right: 0;
+  }
+
+}
+
+@media only screen and (max-width: 450px) {
+
+  h1 {
+    font-size: 4rem;
+    letter-spacing: 1rem;
+    text-align: center;
+  }
+
+  .textarea legend {
+    text-align: center;
+  }
+
+  textarea {
+    width: 75%;
+  }
+
+
+}

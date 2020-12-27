@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Juan Bermejo Gallego">
+    <meta name="description" content="this page is about how webforms are so useful">
+    <meta name="keywords" content="forms, web-forms, assignment, practice, lesson 9">
+    <title>Friendly Survey page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/styleform.css">
+    <link rel="stylesheet" type="text/css" href="./styles/stylemedia.css">
+
+    <script src="https://kit.fontawesome.com/4e12779179.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <header tabindex="1">
+
+      <h1 tabindex="0">Friendly Survey</h1>
+      <h2>Welcome!!!</h2>
+      <p>Welcome to this page, it is a friendly survey...</p>
+      <nav>
+        <a href="./index.html">Homepage</a>
+      </nav>
+
+  </header>
+  <main>
+
+    <h3>Starts Here!!!</h3>
+
+      <form method="GET" autocomplete="on" title="friendly survey">
+
+        <!-- First Fielset -->
+        <fieldset>
+          <legend class="main" tabindex="0">Who are you?</legend>
+           <label for="firstname">Your Name or Alias:</label>
+           <input id="firstname" type="text" name="firstName" autofocus>
+           <!-- required  -->
+           <label for="lastname">Last Name:</label>
+           <input id="lastname" type="text" name="lastName">
+           <!-- required -->
+
+           <!-- Your Gender / Sub Fieldset -->
+           <fieldset class="gender">
+             <legend tabindex="0">Select your gender, if you don't feel comfortable, tab to skip</legend>
+              <a href="#b-day" class="hidden" tabindex="0">Skip to the next question</a>
+               <input id="male" type="radio" name="gender" value="male" tabindex="0">
+               <label for="male" tabindex="0">Male</label>
+               <input id="female" type="radio" name="gender" value="female" tabindex="0">
+               <label for="female" tabindex="0">Female</label>
+               <input id="gay-lesbian" type="radio" name="gender" value="gay or lesbian" tabindex="0">
+               <label for="gay-lesbian" tabindex="0">Gay or Lesbian</label>
+               <input id="trans" type="radio" name="gender" value="transgender" tabindex="0">
+               <label for="trans" tabindex="0">Transgender</label>
+               <input id="bi" type="radio" name="gender" value="bisexual" tabindex="0">
+               <label for="bi" tabindex="0">Bisexual</label>
+               <input id="other" type="radio" name="gender" value="other" tabindex="0">
+               <label for="other" tabindex="0">Other</label>
+          </fieldset>
+
+           <!-- Your Birthday -->
+
+           <label for="b-day" tabindex="0">When is your Birthday:</label>
+           <br>
+           <a href="#second-form" class="hidden" tabindex="0">If you prefer to not share your personal information, skip this</a>
+           <input id="b-day" type="text" name="birthday" placeholder="MM/DD/YYYY">
+           <br>
+           <!-- Guest Email -->
+           <label for="email" id="e-mail">Your E-mail:</label>
+           <br>
+           <input id="email" type="email" name="guestEmail" placeholder="mail@mail.com" aria-label="enter your email address">
+           <br>
+           <!-- Current Address -->
+           <label for="address">What's Your Current Address?</label>
+           <br>
+           <input id="address" type="text" name="guestNewAddress">
+           <br>
+           <!-- Last Address -->
+           <label>What Was Your Last Address?
+             <input type="text" name="guestOldAddress">
+           </label>
+           <br>
+           <!-- Phone Number -->
+           <label for="phone">Enter Your Phone Number</label>
+           <br>
+           <input id="phone" type="tel" name="guestPhone" placeholder="(000)-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" >
+           <!-- required -->
+           <br>
+           <!-- Your Website -->
+           <label for="website">Add your Website</label>
+           <br>
+           <input id="website" type="url" name="guestWebsite">
+           <br>
+           <!-- <input type="submit" value="Submit">
+           <br> -->
+        </fieldset>
+
+        <!-- Second Fieldset -->
+        <fieldset id="second-form">
+          <legend class="main" tabindex="0">Tell us more about you</legend>
+          <!-- Pets Sub Fieldset -->
+          <fieldset>
+            <legend tabindex="0">Do you have pets?</legend>
+              <input type="checkbox" id="yes" name="yes" value="yes">
+              <label for="yes">Yes</label>
+              <input type="checkbox" id="no" name="no" value="no">
+              <label for="no">No</label>
+
+            <p tabindex="0">If You Check YES</p>
+            <label for="quantity">How Many Pets do you have?</label>
+            <input id="quantity" type="number" name="petNumber" min="0" max="25">
+
+            <p tabindex="0">What type or types of pets do you have?</p>
+            <label>Dogs
+              <input type="checkbox" name="pet" value="dog">
+            </label>
+            <label>Cats
+              <input type="checkbox" name="pet" value="cat">
+            </label>
+            <label>Rabbit
+              <input type="checkbox" name="pet" value="rabbit">
+            </label>
+            <label>Hamster
+              <input type="checkbox" name="pet" value="hamster">
+            </label>
+            <label>Lizard
+              <input type="checkbox" name="pet" value="lizard">
+            </label>
+            <label>Other
+              <input type="checkbox" name="pet" value="other">
+            </label>
+            <br><br>
+            <label>If you checked 'OTHER', please let us know which pet you have
+              <input type="text" name="pet">
+            </label>
+          </fieldset>
+          <br>
+
+        <label>What's your Zodiacal Sign?
+          <select name="horoscope">
+            <!-- This option suggets to the user choose one action -->
+            <option value="">Please select</option>
+            <option value="aquarius">Aquarius</option>
+            <option value="pisces">Pisces</option>
+            <option value="aries">Aries</option>
+            <option value="taurus">Taurus</option>
+            <option value="gemini">Gemini</option>
+            <option value="cancer">Cancer</option>
+            <option value="leo">Leo</option>
+            <option value="virgo">Virgo</option>
+            <option value="libra">Libra</option>
+            <option value="scorpio">Scorpio</option>
+            <option value="sagittarius">Sagittarius</option>
+            <option value="capricorn">Capricorn</option>
+          </select>
+        </label>
+        <br>
+        <br>
+        <label for="season">What's your favorite season?</label>
+          <select id="season" name="season">
+            <option value="">Please select</option>
+            <option value="winter">Winter</option>
+            <option value="spring">Spring</option>
+            <option value="summer">Summer</option>
+            <option value="fall">Autumn</option>
+          </select>
+          <br>
+          <br>
+        <label for="colors">What's your favorite color?</label>
+          <select id="colors" name="colors">
+            <option value="">Please select</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="other">Other</option>
+          </select>
+          <br><br>
+          <label>If you checked 'OTHER', please tell us which color you like
+            <input type="text" name="color">
+            </label>
+            <br><br>
+
+        <!-- Food Sub Fieldset  -->
+        <fieldset>
+          <legend tabindex="0">What's your favorite food?</legend>
+            <label>
+              <input type="checkbox" name="food" value="american">Meat Loaf
+            </label>
+            <label>
+              <input type="checkbox" name="food" value="italian">Pizza
+            </label>
+            <label>
+              <input type="checkbox" name="food" value="spanish">Paella
+            </label>
+            <label>
+              <input type="checkbox" name="food" value="chinese">Spring Rolls
+            </label>
+            <label>
+              <input type="checkbox" name="food" value="mexican">Tacos
+            </label>
+            <label>
+              <input type="checkbox" name="food" value="japanese">Sushi
+            </label>
+            <label>
+              <input type="checkbox" name="food" value="other">Other
+            </label>
+            <br><br>
+            <label>If you checked 'OTHER', please tell us which type of food you like the most
+              <input type="text" name="food">
+              </label>
+            </fieldset>
+
+          </fieldset>
+
+      <fieldset class="textarea">
+        <legend class="main" tabindex="0">Leave your suggestions here:</legend>
+        <a href="#send" class="hidden" tabindex="0">If you don't have any suggestions, skip this action</a>
+        <textarea name="comment" rows="10" cols="50">Please, leave your comments here!!
+        </textarea>
+        <br>
+        <!-- <button type="button" onclick="alert('Thank you')">Submit</button> -->
+      </fieldset>
+
+        <input type="submit" name="submit" value="submit" id="send">
+</form>
+
+    <nav>
+      <a href="./index.html">Back Home</a>
+    </nav>
+
+
+  </main>
+  <footer>
+    <div class="nav-footer" aria-hidden="true">
+      <a href="#" class="footer-icon"><i class="fab fa-telegram"></i></a>
+      <a href="#" class="footer-icon"><i class="fab fa-whatsapp-square"></i></a>
+      <a href="#" class="footer-icon"><i class="fab fa-skype"></i></a>
+    </div>
+    <h4 tabindex="0">&copy; 2020 Bermejo & Gallego Designs</h4>
+  </footer>
+  </body>
+</html>
